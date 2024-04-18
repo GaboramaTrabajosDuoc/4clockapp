@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect} from 'react';
+import DailyTasks from './templates/DailyTasks';
+import Modal from 'react-modal';
 
 function App() {
+  useEffect(() => {
+    // Set app element for React Modal
+    Modal.setAppElement('#root');
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <DailyTasks />
     </div>
   );
 }
 
+// Export the App component
 export default App;
