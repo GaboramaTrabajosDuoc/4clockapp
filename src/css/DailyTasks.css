@@ -1,24 +1,32 @@
 :root {
-    /* Main colors for tasks */
-    --turquoise: #73feee;
-    --sky-blue: #ace2ff;
-    --royal-blue: #4169E1;
-    --pink: #fbd3da;
-    --white: #ffffff;
-  
-/* Muted Turquoise */
---turquoise-shade-light-1: #a0f7ff;
---turquoise-shade-light-2: #b6ffff;
---turquoise-shade-light-3: #d1ffff;
---turquoise-shade-1: #8bf6ec;
---turquoise-shade-2: #6ecdc3;
---turquoise-shade-3: #55a69b;
---turquoise-shade-4: #3c7b73;
---turquoise-shade-5: #2a5e54;
---turquoise-shade-6: #1b4038;
+
+/* Blue Palette */
+--blue-base: #039cfc;
+
+/* Shades */
+--blue-shade-light-1: #4fb6ff; /* Light Blue */
+--blue-shade-light-2: #77c5ff; /* Light Blue */
+--blue-shade-light-3: #9ed4ff; /* Light Blue */
+--blue-shade-1: #0382e0; /* Blue */
+--blue-shade-2: #0263b0; /* Dark Blue */
+--blue-shade-3: #01437f; /* Dark Blue */
+--blue-shade-4: #012a57; /* Deep Blue */
+
+
+/* Muted Turquoise Adjusted for Sky Blue Match */
+--turquoise-shade-light-1: #7fdaff; /* Sky Blue Turquoise */
+--turquoise-shade-light-2: #5cbcff; /* Sky Blue Turquoise */
+--turquoise-shade-light-3: #5cbcff; /* Sky Blue Turquoise */
+--turquoise-shade-1: #4da8e1;
+--turquoise-shade-2: rgb(193, 234, 249);
+--turquoise-shade-3: #2b89de;
+--turquoise-shade-4: #0074db;
+--turquoise-shade-5: #0058a8;
+--turquoise-shade-6: #003c75;
+
 
 /* Muted Sky Blue */
---skyblue-shade-1: #addcff;
+--skyblue-shade-1: #93d0ff;
 --sky-blue-shade-2: #7daab4;
 --sky-blue-shade-3: #5e8993;
 --sky-blue-shade-4: #3f6772;
@@ -60,7 +68,62 @@
     --red-shade-4: #a12131;
     --red-shade-5: #8b1919;
     --red-shade-6: #750f0f;
+
+    --orange-1: #f9d0e7; /* Soft Muted Orange */
+    --orange-2: #f7c0d9; /* Soft Muted Orange */
+    --orange-3: #f5b0cb; /* Soft Muted Orange */
+    --orange-4: #f39fbf; /* Soft Muted Orange */
+    --orange-5: #f18fb3; /* Soft Muted Orange */
+    --orange-6: #ef7fa7; /* Soft Muted Orange */
+    --orange-7: #ed6f9b; /* Soft Muted Orange */
+    --orange-8: #eb5f8f; /* Soft Muted Orange */
+    --orange-9: #e94f83; /* Soft Muted Orange */
   
+/* Green Version */
+
+/* Red */
+--green-shade-1: #84ec84; /* Soft Green */
+--green-shade-2: #70d370; /* Soft Green */
+--green-shade-3: #5ebb5e; /* Soft Green */
+--green-shade-4: #4da84d; /* Soft Green */
+--green-shade-5: #3b933b; /* Soft Green */
+--green-shade-6: #298f29; /* Soft Green */
+
+/* Orange */
+--green-orange-1: #d8f0da; /* Soft Greenish Orange */
+--green-orange-2: #c1e7c1; /* Soft Greenish Orange */
+--green-orange-3: #aadfaa; /* Soft Greenish Orange */
+--green-orange-4: #93d693; /* Soft Greenish Orange */
+--green-orange-5: #7ccf7c; /* Soft Greenish Orange */
+--green-orange-6: #65c765; /* Soft Greenish Orange */
+--green-orange-7: #4ec04e; /* Soft Greenish Orange */
+--green-orange-8: #37ba37; /* Soft Greenish Orange */
+--green-orange-9: #20b320; /* Soft Greenish Orange */
+
+
+    /*wood*/
+    --wood-shade-1: #ffc6a8; 
+    --wood-shade-2: #bc9862; 
+    --wood-shade-3: #a87d3f; 
+    --wood-shade-4: #8e6f33; 
+    --wood-shade-5: #725c26; 
+    --wood-shade-6: #5a4920; 
+
+/* Muted Orangish Palette */
+  /* Yellow Palette */
+/* More Muted Orangish Palette */
+/* Wood and Orangish Mix */
+
+/* Lighter Shades */
+ /*wood*/
+ --wood-1: #ffc6a8;
+ --wood-2: #c69e8f; 
+ --wood-3: #db7f6f; 
+ --wood-4: #c76857; 
+ --wood-5: #8e6f33; 
+ --wood-6: #725c26; 
+ --wood-7: #5a4920; 
+
     /* Dark Gray */
     --dark-gray-shade-1: #3e4347;
     --dark-gray-shade-2: #33383c;
@@ -89,7 +152,7 @@
   a, button, cta {
     font-weight: 500;
     font-size: 40px;
-    color: var(--white);
+    color: var(--turquoise-shade-2);
     text-decoration: none;
   }
   
@@ -100,13 +163,91 @@
   }
   
   header {
+    background-color: var(--turquoise-shade-1);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 0 0 5px var(--turquoise-shade-light-3);
+    height: 12vh;
+    position: relative;
     padding: 20px 5%;
     border: 1px solid black;
   }
   
+/*-----task list----------------------------------------------------*/
+  .list {
+    position: absolute;
+    top: calc(10%); 
+    bottom: calc(20%);
+    left: 0;
+    right: 0;
+    border: solid 5px;
+    padding-top: 20px;
+  }
+
+  .task{
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 2px;
+    margin: 10px 0px;
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0px 10px 0px 10px;
+    box-sizing: border-box;
+    box-shadow: -10px 5px 10px 5px var(--blue-shade-2); 
+  }
+
+  .task:hover{
+    box-shadow: -10px 5px 10px 8px var(--blue-shade-2);
+    margin: 20px 0px;
+    transition: all 0.2s ease 0s; 
+  }
+
+  .task span{
+    padding: 0px 10px 0px 10px;
+  }
+
+  .task-buttons{
+    position: absolute; 
+    right: 0;
+    height: 60px;
+    font-size: 10px;     
+  }
+
+  .task button{
+    padding: 5px;
+    margin: 0px 20px;
+    right: 100%;
+    font-size: 30px;    
+  }  
+
+  .button-move {
+    padding: 10px;
+    margin: -20px -20px;
+    right: 100%;
+    font-size: 30px;
+    width: 100px;
+}
+
+.delete{
+  background-color: var(--red-shade-1);
+}
+
+.delete:hover{
+  background-color: var(--red-shade-3);
+  box-shadow: 0 0 0 10px var(--orange-6);
+}
+
+.done{
+  background-color: var(--green-orange-9);
+}
+
+.done:hover{
+  background-color: var(--green-shade-6);
+  box-shadow: 0 0 0 10px var(--green-orange-9);
+}
+
   footer {
     background-color: var(--turquoise-shade-1);
     margin-top: auto;
@@ -119,7 +260,7 @@
     padding: 0;
   }
   
-  .footer-nav-links {
+  .footer-nav-links{
     background-color: var(--turquoise-shade-1);
     margin-top: auto;
     height: 19.5vh;

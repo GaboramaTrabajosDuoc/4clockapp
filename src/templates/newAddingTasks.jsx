@@ -1,9 +1,7 @@
-//templates/newAddingTasks.jsx
-
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'; // Import useState and useEffect
 import '../css/newAddTasks.css';
 
-function List() {
+export function List() { // Export List as named export
     const [tasks, setTasks] = useState([]);
     const [newTask, setNewTask] = useState("");
     const [taskNumbers, setTaskNumbers] = useState([]);
@@ -42,12 +40,13 @@ function List() {
                 <button onClick={addTask}>ADD</button>
             </div>
             <ul>
-                {tasks.map((task, index) => (
-                    <li key={task.id}>{task.text}</li>
-                ))}
+            {tasks.map((task, index) => (
+                <li key={task.id}>
+                    <span className="task-number">{task.position}) </span>
+                    <span className="task-text">{task.text}</span>
+                </li>
+            ))}
             </ul>
         </div>
     );
 }
-
-export default List;
