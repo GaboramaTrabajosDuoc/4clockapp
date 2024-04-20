@@ -4,19 +4,19 @@
 --blue-base: #039cfc;
 
 /* Shades */
---blue-shade-light-1: #4fb6ff; /* Light Blue */
---blue-shade-light-2: #77c5ff; /* Light Blue */
---blue-shade-light-3: #9ed4ff; /* Light Blue */
---blue-shade-1: #0382e0; /* Blue */
---blue-shade-2: #0263b0; /* Dark Blue */
---blue-shade-3: #01437f; /* Dark Blue */
---blue-shade-4: #012a57; /* Deep Blue */
+--blue-shade-light-1: #4fb6ff; 
+--blue-shade-light-2: #77c5ff; 
+--blue-shade-light-3: #9ed4ff; 
+--blue-shade-1: #0382e0; 
+--blue-shade-2: #0263b0; 
+--blue-shade-3: #01437f; 
+--blue-shade-4: #012a57; 
 
 
 /* Muted Turquoise Adjusted for Sky Blue Match */
---turquoise-shade-light-1: #7fdaff; /* Sky Blue Turquoise */
---turquoise-shade-light-2: #5cbcff; /* Sky Blue Turquoise */
---turquoise-shade-light-3: #5cbcff; /* Sky Blue Turquoise */
+--turquoise-shade-light-1: #7fdaff; 
+--turquoise-shade-light-2: #5cbcff; 
+--turquoise-shade-light-3: #5cbcff; 
 --turquoise-shade-1: #4da8e1;
 --turquoise-shade-2: rgb(193, 234, 249);
 --turquoise-shade-3: #2b89de;
@@ -41,7 +41,7 @@
 --royal-blue-shade-5: #12232a;
 --royal-blue-shade-6: #07131a;
   
-    /* Pink */
+  /* Pink */
     --pink-shade-1: #e6a9b8;
     --pink-shade-2: #d396a8;
     --pink-shade-3: #cc879f;
@@ -50,7 +50,7 @@
     --pink-shade-6: #7f3c56;
     --pink-shade-7: #66233e;
   
-    /* Purple */
+  /* Purple */
     --purple-shade-light-1: #b797ff;
     --purple-shade-light-2: #c9b1ff;
     --purple-shade-light-3: #dbc9ff;
@@ -61,7 +61,7 @@
     --purple-shade-5: #4b1aa4;
     --purple-shade-6: #320882;
   
-    /* Red */
+  /* Red */
     --red-shade-1: #ec4c5c;
     --red-shade-2: #d33646;
     --red-shade-3: #bb2b3b;
@@ -69,83 +69,93 @@
     --red-shade-5: #8b1919;
     --red-shade-6: #750f0f;
 
-    --orange-1: #f9d0e7; /* Soft Muted Orange */
-    --orange-2: #f7c0d9; /* Soft Muted Orange */
-    --orange-3: #f5b0cb; /* Soft Muted Orange */
-    --orange-4: #f39fbf; /* Soft Muted Orange */
-    --orange-5: #f18fb3; /* Soft Muted Orange */
-    --orange-6: #ef7fa7; /* Soft Muted Orange */
-    --orange-7: #ed6f9b; /* Soft Muted Orange */
-    --orange-8: #eb5f8f; /* Soft Muted Orange */
-    --orange-9: #e94f83; /* Soft Muted Orange */
+    --orange-1: #f9d0e7; 
+    --orange-2: #f7c0d9; 
+    --orange-3: #f5b0cb; 
+    --orange-4: #f39fbf; 
+    --orange-5: #f18fb3; 
+    --orange-6: #ef7fa7; 
+    --orange-7: #ed6f9b; 
+    --orange-8: #eb5f8f; 
+    --orange-9: #e94f83; 
+
+/* Green */
+--green-shade-1: #84ec84; 
+--green-shade-2: #70d370; 
+--green-shade-3: #5ebb5e; 
+--green-shade-4: #4da84d; 
+--green-shade-5: #3b933b; 
+--green-shade-6: #298f29; 
+--green-orange-1: #d8f0da; 
+--green-orange-2: #c1e7c1; 
+--green-orange-3: #aadfaa; 
+--green-orange-4: #93d693; 
+--green-orange-5: #7ccf7c; 
+--green-orange-6: #65c765; 
+--green-orange-7: #4ec04e; 
+--green-orange-8: #37ba37; 
+--green-orange-9: #20b320; 
+
+/*wood*/
+--wood-shade-1: #ffc6a8; 
+--wood-shade-2: #bc9862; 
+--wood-shade-3: #a87d3f; 
+--wood-shade-4: #8e6f33; 
+--wood-shade-5: #725c26; 
+--wood-shade-6: #5a4920; 
+--wood-1: #ffc6a8;
+--wood-2: #c69e8f; 
+--wood-3: #db7f6f; 
+--wood-4: #c76857; 
+--wood-5: #8e6f33; 
+--wood-6: #725c26; 
+--wood-7: #5a4920; 
+
+/* Dark Gray */
+--dark-gray-shade-1: #3e4347;
+--dark-gray-shade-2: #33383c;
+--dark-gray-shade-3: #292e32;
+--dark-gray-shade-4: #1e2327;
+--dark-gray-shade-5: #14181c;
+--dark-gray-shade-6: #0a0c0f;
   
-/* Green Version */
+/* White */
+--white-shade-1: #ffffff;
+--white-shade-2: #f2f2f2;
+--white-shade-3: #e5e5e5;
+--white-shade-4: #d9d9d9;
+--white-shade-5: #cccccc;
+--white-shade-6: #bfbfbf;
 
-/* Red */
---green-shade-1: #84ec84; /* Soft Green */
---green-shade-2: #70d370; /* Soft Green */
---green-shade-3: #5ebb5e; /* Soft Green */
---green-shade-4: #4da84d; /* Soft Green */
---green-shade-5: #3b933b; /* Soft Green */
---green-shade-6: #298f29; /* Soft Green */
+/*Priorities*/
 
-/* Orange */
---green-orange-1: #d8f0da; /* Soft Greenish Orange */
---green-orange-2: #c1e7c1; /* Soft Greenish Orange */
---green-orange-3: #aadfaa; /* Soft Greenish Orange */
---green-orange-4: #93d693; /* Soft Greenish Orange */
---green-orange-5: #7ccf7c; /* Soft Greenish Orange */
---green-orange-6: #65c765; /* Soft Greenish Orange */
---green-orange-7: #4ec04e; /* Soft Greenish Orange */
---green-orange-8: #37ba37; /* Soft Greenish Orange */
---green-orange-9: #20b320; /* Soft Greenish Orange */
+  /* must */
+  --must-light: #FFCCCC;
+  --must-medium: #FF6666;
+  --must-dark: #CC0000;
 
+  /* should */
+  --should-light: #FFFFCC;
+  --should-medium: #FFFF99;
+  --should-dark: #CCCC00;
 
-    /*wood*/
-    --wood-shade-1: #ffc6a8; 
-    --wood-shade-2: #bc9862; 
-    --wood-shade-3: #a87d3f; 
-    --wood-shade-4: #8e6f33; 
-    --wood-shade-5: #725c26; 
-    --wood-shade-6: #5a4920; 
+  /* could */
+  --could-light: #CCFFCC;
+  --could-medium: #99FF99;
+  --could-dark: #00CC00;
 
-/* Muted Orangish Palette */
-  /* Yellow Palette */
-/* More Muted Orangish Palette */
-/* Wood and Orangish Mix */
+  /* would */
+  --would-light: #CCDDFF;
+  --would-medium: #99CCFF;
+  --would-dark: #3366CC;
+}
 
-/* Lighter Shades */
- /*wood*/
- --wood-1: #ffc6a8;
- --wood-2: #c69e8f; 
- --wood-3: #db7f6f; 
- --wood-4: #c76857; 
- --wood-5: #8e6f33; 
- --wood-6: #725c26; 
- --wood-7: #5a4920; 
-
-    /* Dark Gray */
-    --dark-gray-shade-1: #3e4347;
-    --dark-gray-shade-2: #33383c;
-    --dark-gray-shade-3: #292e32;
-    --dark-gray-shade-4: #1e2327;
-    --dark-gray-shade-5: #14181c;
-    --dark-gray-shade-6: #0a0c0f;
-  
-    /* White */
-    --white-shade-1: #ffffff;
-    --white-shade-2: #f2f2f2;
-    --white-shade-3: #e5e5e5;
-    --white-shade-4: #d9d9d9;
-    --white-shade-5: #cccccc;
-    --white-shade-6: #bfbfbf;
-  }
   
   * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: var(--turquoise-shade-light-3);
+    background-color: white;
     text-decoration: none;
   }
   
@@ -171,8 +181,22 @@
     height: 12vh;
     position: relative;
     padding: 20px 5%;
-    border: 1px solid black;
   }
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--turquoise-shade-1);
+    margin-right: 20px; /* Adjust the margin as needed */
+  }
+  
+  .score {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    background-color: var(--turquoise-shade-1);
+  }
+  
   
 /*-----task list----------------------------------------------------*/
   .list {
@@ -181,7 +205,7 @@
     bottom: calc(20%);
     left: 0;
     right: 0;
-    border: solid 5px;
+    border: solid 5px var(--turquoise-shade-light-3);
     padding-top: 20px;
   }
 
@@ -357,38 +381,51 @@
 /*---------------------------MODAL----------*/
 
 .add-task-modal {
-  width: 50%; /* Adjust the width as needed */
+  height: 50%;
+  width: 60%;
   max-width: 800px;
   position: fixed;
-  top: 50%; /* Center vertically */
-  left: 50%; /* Center horizontally */
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   border: 3px solid;
   border-radius: 10px;
-  z-index: 9999; /* Ensure the modal appears on top */
-}  
+  z-index: 9999;
+  text-align: end;
+  display: flex;
+  justify-content: center;
+}
 
 .to-do-list {
   font-family: Arial, sans-serif;
-  max-width: 400px;
-  margin: 0 auto;
+  position: relative; 
+  width: 100%;
+  margin: 0;
   padding: 20px;
-  transform: translate(5%,0%);
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: whitesmoke;
+  display: flex; 
+  flex-direction: column; 
+  gap: 10px; 
 }
 
 .to-do-list h1 {
   font-size: 24px;
   margin-bottom: 20px;
+  text-align: center;
+  background-color: whitesmoke;
 }
 
 .add-modal {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  flex-direction: column;
+  gap: 0.5px;
+  width: 100%;
 }
 
 .add-modal input[type="text"] {
@@ -399,7 +436,7 @@
 }
 
 .add-modal button {
-  padding: 8px;
+  padding: 5px;
   background-color: #007bff;
   color: #fff;
   border: none;
@@ -409,6 +446,48 @@
 
 .add-modal button:hover {
   background-color: #0056b3;
+}
+
+.input-container {
+  position: relative;
+  height: 50px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
+}
+
+.input-container option[value="Must"] {
+  background-color: #FF6666; /* Red */
+}
+
+.input-container option[value="Should"] {
+  background-color: #FFFF99; /* Yellow */
+}
+
+.input-container option[value="Could"] {
+  background-color: #99FF99; /* Green */
+}
+
+.input-container option[value="Would"] {
+  background-color: #99CCFF; /* Blue */
+}
+
+.add, .close {
+  font-size: 35px;
+  position: absolute;
+  bottom: 50px; /* Adjust the position below the input */
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.add {
+  right: 10px; /* Align .add button to the right */
+  background-color: var(--green-orange-9);
+}
+
+.close {
+  left: 10px; /* Align .close button to the left */
+  background-color: var(--red-shade-2);
 }
 
 .to-do-list ul {
