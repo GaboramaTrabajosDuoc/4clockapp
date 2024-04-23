@@ -1,3 +1,5 @@
+//dailytask
+
 import React, { useState } from "react";
 import "../css/DailyTasks.css";
 import Modal from "react-modal";
@@ -127,6 +129,11 @@ const DailyTasks = () => {
                       >
                         {task.text}
                       </span>
+
+                      <p className="task-description" style={{ backgroundColor: getPriorityColor(task.priority) }}>
+                      {task.description}
+                      </p>
+
                       <ul
                         className="task-buttons"
                         style={{ backgroundColor: getPriorityColor(task.priority) }}
