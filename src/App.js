@@ -1,6 +1,8 @@
 import React, {useEffect} from 'react';
 import DailyTasks from './templates/DailyTasks';
+import Calender from './templates/Calender';
 import Modal from 'react-modal';
+import Calendar from './templates/Calender';
 
 function App() {
   useEffect(() => {

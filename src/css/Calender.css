@@ -1,0 +1,344 @@
+/*src/css/Calender.css*/
+
+:root {
+
+    /* Blue Palette */
+    --blue-base: #039cfc;
+    
+    /* Shades */
+    --blue-shade-light-1: #4fb6ff; 
+    --blue-shade-light-2: #77c5ff; 
+    --blue-shade-light-3: #9ed4ff; 
+    --blue-shade-1: #0382e0; 
+    --blue-shade-2: #0263b0; 
+    --blue-shade-3: #01437f; 
+    --blue-shade-4: #012a57; 
+    
+    
+    /* Muted Turquoise Adjusted for Sky Blue Match */
+    --turquoise-shade-light-1: #7fdaff; 
+    --turquoise-shade-light-2: #5cbcff; 
+    --turquoise-shade-light-3: #5cbcff; 
+    --turquoise-shade-1: #4da8e1;
+    --turquoise-shade-2: rgb(193, 234, 249);
+    --turquoise-shade-3: #2b89de;
+    --turquoise-shade-4: #0074db;
+    --turquoise-shade-5: #0058a8;
+    --turquoise-shade-6: #003c75;
+    
+    
+    /* Muted Sky Blue */
+    --skyblue-shade-1: #93d0ff;
+    --sky-blue-shade-2: #7daab4;
+    --sky-blue-shade-3: #5e8993;
+    --sky-blue-shade-4: #3f6772;
+    --sky-blue-shade-5: #2c4c56;
+    --sky-blue-shade-6: #193338;
+    
+    /* Muted Royal Blue */
+    --royal-blue-shade-1: #667cb4;
+    --royal-blue-shade-2: #4b638a;
+    --royal-blue-shade-3: #354c64;
+    --royal-blue-shade-4: #223745;
+    --royal-blue-shade-5: #12232a;
+    --royal-blue-shade-6: #07131a;
+      
+      /* Pink */
+        --pink-shade-1: #e6a9b8;
+        --pink-shade-2: #d396a8;
+        --pink-shade-3: #cc879f;
+        --pink-shade-4: #b36587;
+        --pink-shade-5: #99506e;
+        --pink-shade-6: #7f3c56;
+        --pink-shade-7: #66233e;
+      
+      /* Purple */
+        --purple-shade-light-1: #b797ff;
+        --purple-shade-light-2: #c9b1ff;
+        --purple-shade-light-3: #dbc9ff;
+        --purple-shade-1: #a77bff;
+        --purple-shade-2: #8e5eff;
+        --purple-shade-3: #7a46e0;
+        --purple-shade-4: #642dc2;
+        --purple-shade-5: #4b1aa4;
+        --purple-shade-6: #320882;
+      
+      /* Red */
+        --red-shade-1: #ec4c5c;
+        --red-shade-2: #d33646;
+        --red-shade-3: #bb2b3b;
+        --red-shade-4: #a12131;
+        --red-shade-5: #8b1919;
+        --red-shade-6: #750f0f;
+    
+        --orange-1: #f9d0e7; 
+        --orange-2: #f7c0d9; 
+        --orange-3: #f5b0cb; 
+        --orange-4: #f39fbf; 
+        --orange-5: #f18fb3; 
+        --orange-6: #ef7fa7; 
+        --orange-7: #ed6f9b; 
+        --orange-8: #eb5f8f; 
+        --orange-9: #e94f83; 
+    
+    /* Green */
+    --green-shade-1: #84ec84; 
+    --green-shade-2: #70d370; 
+    --green-shade-3: #5ebb5e; 
+    --green-shade-4: #4da84d; 
+    --green-shade-5: #3b933b; 
+    --green-shade-6: #298f29; 
+    --green-orange-1: #d8f0da; 
+    --green-orange-2: #c1e7c1; 
+    --green-orange-3: #aadfaa; 
+    --green-orange-4: #93d693; 
+    --green-orange-5: #7ccf7c; 
+    --green-orange-6: #65c765; 
+    --green-orange-7: #4ec04e; 
+    --green-orange-8: #37ba37; 
+    --green-orange-9: #20b320; 
+    
+    /*wood*/
+    --wood-shade-1: #ffc6a8; 
+    --wood-shade-2: #bc9862; 
+    --wood-shade-3: #a87d3f; 
+    --wood-shade-4: #8e6f33; 
+    --wood-shade-5: #725c26; 
+    --wood-shade-6: #5a4920; 
+    --wood-1: #ffc6a8;
+    --wood-2: #c69e8f; 
+    --wood-3: #db7f6f; 
+    --wood-4: #c76857; 
+    --wood-5: #8e6f33; 
+    --wood-6: #725c26; 
+    --wood-7: #5a4920; 
+    
+    /* Dark Gray */
+    --dark-gray-shade-1: #3e4347;
+    --dark-gray-shade-2: #33383c;
+    --dark-gray-shade-3: #292e32;
+    --dark-gray-shade-4: #1e2327;
+    --dark-gray-shade-5: #14181c;
+    --dark-gray-shade-6: #0a0c0f;
+      
+    /* White */
+    --white-shade-1: #ffffff;
+    --white-shade-2: #f2f2f2;
+    --white-shade-3: #e5e5e5;
+    --white-shade-4: #d9d9d9;
+    --white-shade-5: #cccccc;
+    --white-shade-6: #bfbfbf;
+    
+    /*Priorities*/
+    
+      /* must */
+      --must-light: #FFCCCC;
+      --must-medium: #FF6666;
+      --must-dark: #CC0000;
+    
+      /* should */
+      --should-light: #FFFFCC;
+      --should-medium: #FFFF99;
+      --should-dark: #CCCC00;
+    
+      /* could */
+      --could-light: #CCFFCC;
+      --could-medium: #99FF99;
+      --could-dark: #00CC00;
+    
+      /* would */
+      --would-light: #CCDDFF;
+      --would-medium: #99CCFF;
+      --would-dark: #3366CC;
+    }
+    
+  /*General things*/
+      
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        background-color: white;
+        text-decoration: none;
+      }
+      
+      a, button, cta {
+        font-weight: 500;
+        font-size: 40px;
+        color: var(--turquoise-shade-2);
+        text-decoration: none;
+      }
+      
+      .body {
+        display: flex;
+        flex-direction: column;
+        background: black;
+        overflow-x: hidden;
+        overflow-y: auto;
+        box-sizing: border-box;
+      }
+      
+      header {
+        background-color: var(--turquoise-shade-1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 0 0 5px var(--turquoise-shade-light-3);
+        height: 12vh;
+        position: relative;
+        padding: 20px 5%;
+      }
+
+
+      /*--calender--*/
+
+      .calendar-container{
+        width: 100%;
+        height: 100%;
+        border: solid 3px black;
+      }
+
+      .day {
+        border: 1px solid #e2e8f0; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%; 
+        height: 10rem; 
+        border-radius: 0.5rem; 
+        transition: all 100ms ease-in-out; 
+        cursor: pointer;
+      }
+      
+      .day:hover {
+        background-color: var(--would-light); 
+      }
+
+      .days-grid {
+        padding-top: 85px; /* Smaller padding inside the grid container */
+    }
+    
+    .day-header, .day { 
+        display: flex;
+        align-items: center; /* Centers content vertically */
+        justify-content: center; /* Centers content horizontally */
+    }
+
+    .header{
+      border: solid 1.5px black;
+      position: relative; 
+      top: 89px; 
+      justify-content: center;
+      align-items: 'center';
+      width: 100%;
+      border-radius: 15px 15px 5px 5px;
+    }
+
+    .prev, .next{
+      height: 100%;
+      padding: 4px 10px;
+      background-color: #6b46c1; 
+      color: white; 
+      font-size: 18px; 
+      border-radius: 0.25rem; 
+      transition: background-color 0.2s ease-in-out; 
+    }
+    
+    .prev, .next:hover {
+        background-color: #553c9a; 
+    }
+
+    .prev{
+      margin-right: 45px; 
+    }
+    
+    .next{
+        margin-left: 45px; 
+    }
+
+    .day-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: larger;
+      border: solid 1px black;
+      height: 60px;
+      width: 100%; 
+    }
+
+    .days-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr); 
+      gap: 4px; 
+    }
+
+    .day{
+      height: 125px;
+      border-radius: 0px;
+      position: relative; 
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+  .day-number {
+    position: absolute;
+    top: 5px; 
+    right: 5px;
+    background-color: transparent;
+  }
+
+      footer {
+        background-color: var(--turquoise-shade-1);
+        margin-top: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 0 5px var(--turquoise-shade-light-3);
+        height: 20vh;
+        position: relative;
+        padding: 0;
+      }
+      
+      .footer-nav-links{
+        background-color: var(--turquoise-shade-1);
+        margin-top: auto;
+        height: 19.5vh;
+        position: relative;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+      }
+      
+      button {
+        padding: 0.5em 2em;
+        border: none;
+        border-radius: 10px;
+        background-color: var(--turquoise-shade-3);
+        cursor: pointer;
+        transition: all 0.2s ease 0s;
+        box-sizing: border-box;
+        box-shadow: 0 0 0 5px var(--turquoise-shade-2);
+      }
+      
+      .nav_links {
+        list-style: none;
+      }
+      
+      .nav-links a {
+        transition: all 20px 0 0;
+        color: var(--white-shade-5);
+        text-decoration: none;
+      }
+      
+      button:hover {
+        background-color: var(--turquoise-shade-4);
+        box-shadow: 0 0 0 10px var(--turquoise-shade-3);
+        color: var(--white-shade-1);
+      }
+
+    
+    
