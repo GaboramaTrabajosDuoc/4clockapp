@@ -1,0 +1,119 @@
+export default ToDoList;
+
+//src/todolist.js
+
+import React, { useState, useEffect } from 'react';
+
+function ToDoList(){
+
+    const [tasks, setTasks] = useState(["eat breakfast", "take a shower", "go to school"]);
+    const [newTask, setNewTask] = useState("");
+    const [taskNumbers, setTaskNumbers] = useState([]);
+
+    useEffect(() => {
+        // Update task numbers whenever tasks change
+        const newTaskNumbers = tasks.map((_, index) => index + 1);
+        setTaskNumbers(newTaskNumbers);
+    }, [tasks]);
+
+    function handleInputChange(event){
+        setNewTask(event.target.value);
+    }
+
+    function addTask(){
+        if(newTask.trim() !== ""){
+            setTasks(tasks => [...tasks, newTask]);
+            setNewTask("");
+        }
+    }
+
+    function deleteTask(index){
+        const updatedTasks = tasks.filter((_, i) => i !== index);
+        setTasks(updatedTasks);
+    }
+
+    function moveTaskUp(index){
+        if(index > 0){
+            const updatedTasks = [...tasks];
+            const temp = updatedTasks[index];
+            updatedTasks[index] = updatedTasks[index - 1];
+            updatedTasks[index - 1] = temp;
+            setTasks(updatedTasks);
+        }
+    }
+
+    function moveTaskDown(index){
+        if(index < tasks.length - 1){
+            const updatedTasks = [...tasks];
+            const temp = updatedTasks[index];
+            updatedTasks[index] = updatedTasks[index + 1];
+            updatedTasks[index + 1] = temp;
+            setTasks(updatedTasks);
+        }
+    }
+
+    function checkTasks(taskId){}
+
+    return(
+        <div className='to-do-list'>
+            <h1>To Do List</h1>
+            <div>
+                <input type="text" placeholder='Enter a task...' 
+                value={newTask} onChange={handleInputChange}/>
+                <button className='add-button' onClick={addTask}>ADD</button>
+            </div>
+            <ol>
+                {tasks.map((task, index) => (
+                    <li key={index}>
+                        <span className='text'>{taskNumbers[index]}</span>
+                        <span className='text'>{task}</span>
+                        <button className='delete-button' onClick={() => deleteTask(index)}>Delete</button>
+                        <button className='move-button' onClick={() => moveTaskUp(index)}>↑</button>
+                        <button className='move-button' onClick={() => moveTaskDown(index)}>↓</button>
+                    </li>
+                ))}
+            </ol>
+        </div>
+    );
+}
+
+export default ToDoList;
+
+----------------------------------------------------------------------------------------------
+
+import React, { useState } from 'react';
+
+function ToDoList() {
+    const [tasks, setTasks] = useState([
+        { id: 1, text: "Task 1", done: false },
+        { id: 2, text: "Task 2", done: false },
+        // Add more tasks as needed
+    ]);
+    const [progress, setProgress] = useState(0);
+
+    function handleCheckTask(taskId) {
+        const updatedTasks = tasks.filter(task => task.id !== taskId);
+        setTasks(updatedTasks);
+        // Update progress bar or scoring system
+        setProgress(progress => progress + 1);
+    }
+
+    return (
+        <div className="to-do-list">
+            <h1>To Do List</h1>
+            <ul>
+                {tasks.map(task => (
+                    <li key={task.id}>
+                        <span className={task.done ? 'done' : ''}>{task.text}</span>
+                        {!task.done && (
+                            <button onClick={() => handleCheckTask(task.id)}>Check</button>
+                        )}
+                    </li>
+                ))}
+            </ul>
+            <div className="progress-bar">Progress: {progress}</div>
+        </div>
+    );
+}
+
+//---------------------------------------------------------------------------------------------------------------
