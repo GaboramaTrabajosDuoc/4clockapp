@@ -1,0 +1,489 @@
+
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+a, cta, button {
+  font-weight: 200;
+  font-size: 20px;
+  color: var(--turquoise-shade-2);
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+/* Page Layout */
+.body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  background-color: var(--turquoise-shade-1);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Progress Bar */
+.progress-bar-container {
+  flex-grow: 1;
+  max-width: 30vw;
+  background-color: #959595;
+  border-radius: 20px;
+  height: 20px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: var(--green-orange-9);
+  transition: width 0.3s ease-in-out;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Menu Toggle */
+#menuToggle {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#menuToggle .menu-icon {
+  font-size: 28px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+  z-index: 1100; /* Ensures the button is above other elements */
+}
+
+.menu-icon:hover {
+  transform: scale(1.2);
+  transition: color 0.3s ease;
+}
+
+.menu-icon:active {
+  transform: scale(1.0);
+  transition: transform 0.1s ease-in-out;
+}
+
+/* Menu Overlay */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+
+.menu-overlay.visible {
+  display: block; 
+}
+
+/* Menu */
+
+.menu{
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100vh;
+  background: #ededed;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 15px;
+  opacity: 0;
+  pointer-events: none;
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.menu ul {
+  list-style-type: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.menu li{
+  width: 200%;
+  font-size: 40px;
+  gap: 15px;
+  font-weight: bold;
+  color: black;
+  list-style-type: none;
+  background-color: transparent;
+  transition: color 0.3s ease;
+}
+
+.menu a{
+  width: 200%;
+  font-size: 40px;
+  gap: 15px;
+  font-weight: bold;
+  color: black;
+  list-style-type: none;
+  transition: color 0.3s ease;
+  background-color: transparent;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 2px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menu li:hover,.menu a:hover {
+  color: tomato;
+  background-color: #f0f0f0;
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 60%;
+  height: 100vh;
+  background: #ededed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 15px;
+  transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+/* Open State - Moves Menu into View */
+.menu.open {
+  opacity: 1;
+  pointer-events: auto;
+  align-items: center;
+  left: 0;
+}
+
+/* Menu Links */
+#menu a {
+  font-size: 18px;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+#menu a:hover {
+  color: tomato;
+  background-color: #f0f0f0;
+  text-decoration: none;
+  transform: scale(1.2);
+}
+
+#menu a:focus {
+  color: tomato;
+}
+#menu a:active {
+  transform: translateY(150%) scale(1.0);
+  transition: transform 0.1s ease-in-out;
+}
+
+/* Order Button */
+.order {
+  background-color: red;
+  width: auto;
+  height: 40px;
+  text-align: center;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.order:hover {
+  background-color: darkred;
+}
+
+/* Task List */
+.list {
+  flex: 1; 
+  overflow-y: auto;
+  margin: 0;
+  max-height: calc(100vh - 20vh);
+  border: solid 5px var(--turquoise-shade-light-3);
+  padding-top: 20px;
+  border-radius: 20px;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  border: 3px solid red;
+  border-radius: 20px;
+  max-width: 100%;
+  margin: 5px;
+  font-size: 4vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 5px;
+  box-shadow: -10px 5px 10px 5px var(--blue-shade-2);
+}
+
+.task:hover {
+  box-shadow: -10px 5px 10px 8px black;
+  margin: 20px 0px;
+  transition: all 0.2s ease;
+}
+
+.task span {
+  padding: 0px 10px;
+  border-radius: 20px;
+}
+
+.task-description {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: .5em;
+  width: 30vw;
+  padding: 10px;
+  margin: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.task-buttons {
+  position: absolute;
+  gap: 10px;
+  font-size: 3vw;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */
+footer {
+  background-color: var(--turquoise-shade-1);
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 0 5px var(--turquoise-shade-light-3);
+  height: 20vh;
+  position: relative;
+  padding: 0;
+}
+
+/* Add Task Button */
+.add-task {
+  transform: translateY(150%);
+  border: solid black 3px;
+  font-size: 5vw;
+  padding: 0px 1.4vw;
+  margin-top: 20px;
+  border-radius: 50%;
+  align-self: center;
+}
+
+.add-task:hover {
+    transform: translateY(150%) scale(1.2);
+}
+
+.add-task:active {
+  transform: translateY(150%) scale(1.0);
+  transition: transform 0.1s ease-in-out;
+}
+
+/* Modal */
+.add-task-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 50vw;
+  max-width: 500px;
+  transform: translate(-50%, -50%);
+  border: 3px solid;
+  border-radius: 10px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: whitesmoke;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  gap: 15px;
+}
+
+/* Input Fields */
+.add-task-modal input[type="text"],
+.add-task-modal input[type="date"],
+.add-task-modal select,
+.add-task-modal button {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Buttons */
+.add-task-modal button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.add-task-modal button:hover {
+  background-color: #0056b3;
+}
+
+/* Mobile Responsive */
+@media (max-width: 650px) {
+  body {
+    font-size: 16px;
+  }
+
+  .progress-bar-container {
+    width: 30vw;
+  }
+
+  .task-buttons {
+    gap: 5px;
+    width: 30vw;
+    justify-content: flex-end;
+  }
+
+  .add-task {
+    font-size: 7vw;
+    transform: translateY(200%);
+  }
+
+  .menu {
+    width: 100%;
+    font-size: 20px;
+  }
+
+  .menu ul {
+    width: 100%;
+    font-size: 20px;
+  }
+  
+  .menu li{
+    width: 100%;
+    font-size: 20px;
+  }
+  
+  .menu a{
+    width: 100%;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+
+  .task-buttons {
+    width: 14em;
+    justify-content: flex-end;
+  }
+
+  .add-task {
+    font-size: 10vw;
+    transform: translateY(500%);
+  }
+
+  .menu {
+    width: 80%;
+    font-size: 20px;
+  }
+
+  .menu ul {
+    width: 80%;
+    font-size: 20px;
+  }
+  
+  .menu li{
+    width: 80%;
+    font-size: 20px;
+  }
+  
+  .menu a{
+    width: 80%;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 300px) {
+  body {
+    font-size: 12px;
+  }
+
+  .task-buttons {
+    display: none;
+  }
+
+  .progress-bar, .progress-bar span, .progress-bar-container, .order {
+    display: none;
+  }
+
+  .task {
+    font-size: 6vw;
+  }
+
+  .menu {
+    width: 100%;
+    font-size: 20px;
+  }
+
+  .menu ul {
+    width: 100%;
+    font-size: 20px;
+  }
+  
+  .menu li{
+    width: 100%;
+    font-size: 20px;
+  }
+  
+  .menu a{
+    width: 100%;
+    font-size: 20px;
+  }
+}
